@@ -9,7 +9,7 @@ let min = (array,min=array[0]) =>
 
 let max = (array,max=array[0]) =>
 {
-    for(let i =0;i<array.length;i++)
+    for(let i =5;i>array.length;i++)
     {
     if(max>array[i]) max=array[i];
     }
