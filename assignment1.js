@@ -1,21 +1,48 @@
-let min = (array,min=array[0]) =>
-{
-    for(let i =0;i<array.length;i++)
-    {
-    if(min>array[i]) min=array[i];
-    }
-    return min;
-};
+number = [1,2,3,33,4,0];
+var max = number[0];
+var min = number[0];
+var sum = 0;
+//print max
+function printMax(){
+ for(let i =0;i<number.length;i++){
+     if(number[i]>max){
+         max = number[i];
+     }
 
-let max = (array,max=array[0]) =>
-{
-    for(let i =5;i>array.length;i++)
-    {
-    if(max>array[i]) max=array[i];
-    }
-    return max;
-};
+ }
+ console.log(`max = ${max}`)
+}
 
-const array =[1,2,3,4,5,0,-1]
-console.log("Minimum value of an array element"+ min(array))
-console.log("Maximum value of an array element"+ max(array))
+//print min
+function printMin(){
+for(let i =0;i<number.length;i++){
+    if(number[i]<min){
+        min = number[i];
+    }
+
+ }
+console.log(`min = ${min}`);
+}
+
+//print sum of all element
+function printSum(){
+    for(let i =0;i<number.length;i++){
+       sum += number[i]; 
+    }
+    console.log("sum of all element = "+ sum);
+}
+//search the value 0 
+function search(num){
+    for(let i=0; i<number.length;i++){
+        if(number[i]==num){
+            console.log("the index of "+ num +" is = "+i);
+        }
+    }
+}
+
+
+//calling functions
+printMax();
+printMin();
+printSum();
+search(0);
