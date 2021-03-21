@@ -1,48 +1,43 @@
-number = [1,2,3,33,4,0];
-var max = number[0];
-var min = number[0];
-var sum = 0;
-//print max
-function printMax(){
- for(let i =0;i<number.length;i++){
-     if(number[i]>max){
-         max = number[i];
-     }
+let num = [23,345,2,0,-1,34,4,232,54];
 
- }
- console.log(`max = ${max}`)
-}
-
-//print min
-function printMin(){
-for(let i =0;i<number.length;i++){
-    if(number[i]<min){
-        min = number[i];
-    }
-
- }
-console.log(`min = ${min}`);
-}
-
-//print sum of all element
-function printSum(){
-    for(let i =0;i<number.length;i++){
-       sum += number[i]; 
-    }
-    console.log("sum of all element = "+ sum);
-}
-//search the value 0 
-function search(num){
-    for(let i=0; i<number.length;i++){
-        if(number[i]==num){
-            console.log("the index of "+ num +" is = "+i);
+function maxNum(arr){
+    let max = arr[0];
+    for ( let i=0; i<arr.length; i++ ){
+        if(arr[i] > max ){
+            max = arr[i];
         }
     }
+    return max;
 }
 
+function sumOfInt(arr){
+    let sum =0 ;
+    for (let i=0; i < arr.length; i++){
+        sum += arr[i];
+    }
+    return sum;
+}
 
-//calling functions
-printMax();
-printMin();
-printSum();
-search(0);
+function minNum(arr){
+    let min = arr[0];
+    for (let i=0; i<arr.length; i++){
+        if(arr[i] < min ){
+            min = arr[i];
+        }
+    }
+    return min;
+}
+
+function numSearch(arr, number){
+    for(let i=0; i<arr.length; i++){
+        if(arr[i] == number){
+            return "yes";
+        }
+    }
+    return "no";
+}
+
+console.log(maxNum(num));
+console.log(sumOfInt(num));
+console.log(minNum(num));
+console.log(numSearch(num, 345));
